@@ -44,6 +44,7 @@ class SharedPreferencesManager {
       _kApiResponses,
       jsonEncode(ApiResponse.buildList(newResponses)),
     );
+
   }
 
   ///[getAllApiResponses] returns all api responses saved in local disk

@@ -10,7 +10,6 @@ class ApiResponse {
     required this.method,
     required this.statusCode,
     required this.connectionTimeout,
-    required this.contentType,
     required this.headers,
     required this.queryParameters,
     required this.receiveTimeout,
@@ -32,7 +31,6 @@ class ApiResponse {
         method: json['method'] as String,
         statusCode: json['statusCode'] as int,
         connectionTimeout: json['connectionTimeout'] as int,
-        contentType: json['contentType'] as String?,
         headers: json['headers'] as String,
         queryParameters: json['queryParameters'] as String,
         receiveTimeout: json['receiveTimeout'] as int,
@@ -56,7 +54,6 @@ class ApiResponse {
         method: 'GET',
         statusCode: 200,
         connectionTimeout: 0,
-        contentType: 'application/json',
         headers: '',
         queryParameters: '',
         receiveTimeout: 0,
@@ -101,8 +98,6 @@ class ApiResponse {
   ///Response data
   final dynamic body;
 
-  ///Request data type
-  final String? contentType;
 
   ///Request headers
   final String headers;
@@ -133,7 +128,6 @@ class ApiResponse {
     return {
       'body': body,
       'connectionTimeout': connectionTimeout,
-      'contentType': contentType,
       'headers': headers,
       'method': method,
       'queryParameters': queryParameters,
@@ -183,7 +177,6 @@ class ApiResponse {
       method: method ?? this.method,
       statusCode: statusCode ?? this.statusCode,
       connectionTimeout: connectionTimeout ?? this.connectionTimeout,
-      contentType: contentType ?? this.contentType,
       headers: headers ?? this.headers,
       queryParameters: queryParameters ?? this.queryParameters,
       receiveTimeout: receiveTimeout ?? this.receiveTimeout,
@@ -211,7 +204,6 @@ Request Time: $requestTime
 Response Time: $responseTime
 Headers: $headers
 Query Params: $queryParameters
-Content Type: $contentType
 Response Type: $responseType
 Connection Timeout: $connectionTimeout ms
 Receive Timeout: $receiveTimeout ms

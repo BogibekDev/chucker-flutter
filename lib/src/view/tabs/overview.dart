@@ -80,11 +80,6 @@ class OverviewTabView extends StatelessWidget {
           ),
           _dataRow(
             context,
-            attribute: 'Content Type',
-            value: api.contentType ?? 'N/A',
-          ),
-          _dataRow(
-            context,
             attribute: 'Response Type',
             value: api.responseType,
           ),

@@ -85,7 +85,6 @@ class ChuckerDioInterceptor extends Interceptor {
         statusCode: response.statusCode ?? -1,
         connectionTimeout:
             response.requestOptions.connectTimeout?.inMilliseconds ?? 0,
-        contentType: response.requestOptions.contentType,
         headers: response.requestOptions.headers.toString(),
         queryParameters: response.requestOptions.queryParameters.toString(),
         receiveTimeout:
@@ -121,7 +120,6 @@ class ChuckerDioInterceptor extends Interceptor {
         statusCode: response.response?.statusCode ?? -1,
         connectionTimeout:
             response.requestOptions.connectTimeout?.inMilliseconds ?? 0,
-        contentType: response.requestOptions.contentType,
         headers: response.requestOptions.headers.toString(),
         queryParameters: response.requestOptions.queryParameters.toString(),
         receiveTimeout:

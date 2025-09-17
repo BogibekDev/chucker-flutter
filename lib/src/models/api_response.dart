@@ -93,6 +93,10 @@ class ApiResponse {
     }
   }
 
+  static List<Map<String,dynamic>> buildList(List<ApiResponse> list){
+    return list.map((item)=> item.toJson()).toList();
+  }
+
   /// DateTime when request is sent
   final DateTime requestTime;
 

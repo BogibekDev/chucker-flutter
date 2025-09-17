@@ -42,7 +42,7 @@ class SharedPreferencesManager {
     final preferences = await SharedPreferences.getInstance();
     await preferences.setString(
       _kApiResponses,
-      jsonEncode(newResponses),
+      jsonEncode(ApiResponse.buildList(newResponses)),
     );
   }
 
